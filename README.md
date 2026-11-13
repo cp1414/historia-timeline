@@ -2,6 +2,8 @@
 
 An interactive **3D Cover Flow gallery, Archival Index Grid, and Classical Atlas companion** built to help students study and sequentially recite all **160 Classical Christian History Timeline events** (`#001 Creation` through `#160 Modern America Today`), paired with curated public-domain and freely licensed fine art, museum artifacts, archival photographs, original historical summaries, primary references, and MapLibre physical-relief geography.
 
+**Live Exhibition:** [https://cp1414.github.io/historia-timeline/](https://cp1414.github.io/historia-timeline/)
+
 ## Purpose & Pedagogical Design
 
 Students learn the 160 timeline events back-to-back in their `#001`–`#160` chronological recitation order across five period-styled museum wings:
@@ -43,6 +45,8 @@ Cards remain in official `#001`–`#160` recitation sequence so museum wings tra
 - `/`: Open quick search; `Esc` closes search/menus, returns a turned plate to the front, or collapses the Atlas Drawer
 
 ## Running Locally
+
+You can browse the hosted exhibition online at [https://cp1414.github.io/historia-timeline/](https://cp1414.github.io/historia-timeline/), or run it locally using either option below.
 
 ### Option 1: Open Directly (`file://`, Zero Setup)
 Double-click [`index.html`](./index.html) or run:
