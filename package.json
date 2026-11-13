@@ -1,0 +1,29 @@
+{
+  "name": "historia-timeline",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Interactive 3D Cover Flow reviewer for the 160 Classical Christian History Timeline Events (Creation to Modern America)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "bundle": "python3 scripts/bundle_browser.py",
+    "verify": "python3 scripts/verify_project.py",
+    "test": "python3 scripts/verify_project.py",
+    "serve": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "maplibre-gl": "^4.7.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1"
+  }
+}
