@@ -4,15 +4,15 @@ An interactive **3D Cover Flow gallery, Archival Index Grid, and Classical Atlas
 
 ## Purpose & Pedagogical Design
 
-Students learn the 160 timeline events back-to-back in their `#001`–`#160` chronological recitation order across five period-styled museum wings:
+Students learn the 160 timeline events back-to-back in their `#001`–`#160` chronological recitation order across five period-styled museum wings (`32` plates each, keeping each event in its historical era wing as periods overlap):
 
-1. **Gallery I · Old Testament & Ancient Egypt** (`#001`–`#032`)
-2. **Gallery II · New Testament, Greece & Rome** (`#033`–`#064`)
-3. **Gallery III · Middle Ages, Renaissance & Reformation** (`#065`–`#096`)
-4. **Gallery IV · Explorers to 1815** (`#097`–`#128`)
-5. **Gallery V · 1815 to Present** (`#129`–`#160`)
+1. **Gallery I · Old Testament & Ancient Egypt** (`#001`–`#052`, 32 plates)
+2. **Gallery II · New Testament, Greece & Rome** (`#009`–`#068`, 32 plates)
+3. **Gallery III · Middle Ages, Renaissance & Reformation** (`#064`–`#100`, 32 plates)
+4. **Gallery IV · Explorers to 1815** (`#087`–`#128`, 32 plates)
+5. **Gallery V · 1815 to Present** (`#129`–`#160`, 32 plates)
 
-Cards remain in official `#001`–`#160` recitation sequence so museum wings transition coherently with the memory order rather than shuffling across periods.
+Cards remain in official `#001`–`#160` recitation sequence in the main gallery so chronology and historical era wings both stay intact.
 
 ## Features
 
