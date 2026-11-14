@@ -22,7 +22,7 @@ import bundle_browser  # noqa: E402
 EXPECTED_SERIES_COUNT = 5
 EXPECTED_TOTAL_EVENTS = 160
 EXPECTED_EVENTS_PER_SERIES = 32
-CC_ATTRIBUTION_CARDS = {18, 19, 26, 31, 32, 36, 37, 38, 70, 73, 88, 95}
+CC_ATTRIBUTION_CARDS = {19, 20, 28, 32, 35, 36, 48, 52, 70, 73, 89, 99}
 
 BANNED_TERMS = (
     "ver" + "itas",
@@ -289,7 +289,22 @@ assert(seriesIds.size === 5, '5 distinct seriesId wings exist');
 for (const sid of seriesIds) {{
   const wingRes = searchTimelineEvents(EVENTS, '', sid, INDEX_MAP);
   assert(wingRes.results.length === 32 && wingRes.totalInSeries === 32, 'series wing ' + sid + ' has 32 cards');
+  for (let i = 1; i < wingRes.results.length; i += 1) {{
+    assert(wingRes.results[i].event.cardNumber > wingRes.results[i - 1].event.cardNumber, 'wing ' + sid + ' preserves chronological cardNumber order');
+  }}
 }}
+
+const minoan = searchTimelineEvents(EVENTS, 'Minoan Culture', 'nt-greece-rome', INDEX_MAP);
+assert(minoan.results.length >= 1 && minoan.results[0].event.cardNumber === 9, '#009 Minoan Culture is in Greece & Rome wing at position 9');
+
+const mycenaean = searchTimelineEvents(EVENTS, 'Mycenaean Culture', 'nt-greece-rome', INDEX_MAP);
+assert(mycenaean.results.length >= 1 && mycenaean.results[0].event.cardNumber === 27, '#027 Mycenaean Culture is at position 27');
+
+const alexEgypt = searchTimelineEvents(EVENTS, 'Alexander the Great Conquers Egypt', 'ot-egypt', INDEX_MAP);
+assert(alexEgypt.results.length >= 1 && alexEgypt.results[0].event.cardNumber === 48, '#048 Alexander the Great Conquers Egypt stays in OT & Egypt wing');
+
+const princeHenry = searchTimelineEvents(EVENTS, 'Prince Henry the Navigator', 'explorers-1815', INDEX_MAP);
+assert(princeHenry.results.length >= 1 && princeHenry.results[0].event.cardNumber === 87, '#087 Prince Henry the Navigator stays in Explorers wing');
 
 const plate42 = searchTimelineEvents(EVENTS, '#042', 'all', INDEX_MAP);
 assert(plate42.isQueryActive === true && plate42.results.length >= 1, '#042 finds card 42');

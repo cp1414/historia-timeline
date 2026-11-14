@@ -4004,13 +4004,16 @@ export default function App() {
                   />
                   {selectedSeries === 'all' && !(isSearchFilterActive && searchOutput.isQueryActive) && (
                     <div className="hidden sm:grid grid-cols-5 gap-1">
-                      {SERIES_INFO.map((s, sIdx) => {
+                      {SERIES_INFO.map((s) => {
                         const isCurrentSeries = activeEvent.seriesId === s.id;
                         return (
                           <button
                             key={s.id}
                             type="button"
-                            onClick={() => goToIndex(sIdx * 32)}
+                            onClick={() => {
+                              const firstSeriesIdx = filteredEvents.findIndex((ev) => ev.seriesId === s.id);
+                              if (firstSeriesIdx !== -1) goToIndex(firstSeriesIdx);
+                            }}
                             className="h-[2px] w-full transition-opacity focus:outline-none"
                             style={{
                               backgroundColor: s.color,
